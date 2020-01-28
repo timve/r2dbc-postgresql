@@ -311,7 +311,7 @@ This reference table shows the type mapping between [PostgreSQL][p] and Java dat
 | [`character varying`][psql-character-ref]       | [`String`][java-string-ref]|
 | [`cidr`][psql-cidr-ref]                         | Not yet supported.|
 | [`circle`][psql-circle-ref]                     | Not yet supported.|
-| [`date`][psql-date-ref]                         | [`LocalDate`][java-ld-ref]|
+| [`date`][psql-date-ref]                         | [`LocalDate`][java-ld-ref], [`java.sql.Date`][java-sql-date-ref]|
 | [`double precision`][psql-floating-point-ref]   | [**`Double`**][java-double-ref], [`Float`][java-float-ref], [`Boolean`][java-boolean-ref], [`Byte`][java-byte-ref], [`Short`][java-short-ref], [`Integer`][java-integer-ref], [`Long`][java-long-ref], [`BigDecimal`][java-bigdecimal-ref]|
 | [`inet`][psql-inet-ref]                         | [**`InetAddress`**][java-inet-ref]|
 | [`integer`][psql-integer-ref]                   | [**`Integer`**][java-integer-ref], [`Boolean`][java-boolean-ref], [`Byte`][java-byte-ref], [`Short`][java-short-ref], [`Long`][java-long-ref], [`BigDecimal`][java-bigdecimal-ref]|
@@ -336,8 +336,8 @@ This reference table shows the type mapping between [PostgreSQL][p] and Java dat
 | [`text`][psql-text-ref]                         | [**`String`**][java-string-ref], [`Clob`][r2dbc-clob-ref]|
 | [`time [without time zone]`][psql-time-ref]     | [`LocalTime`][java-lt-ref]|
 | [`time [with time zone]`][psql-time-ref]        | Not yet supported.|
-| [`timestamp [without time zone]`][psql-time-ref]|[**`LocalDateTime`**][java-ldt-ref], [`LocalTime`][java-lt-ref], [`LocalDate`][java-ld-ref], [`java.util.Date`][java-legacy-date-ref]|
-| [`timestamp [with time zone]`][psql-time-ref]   | [**`OffsetDatetime`**][java-odt-ref], [`ZonedDateTime`][java-zdt-ref], [`Instant`][java-instant-ref]|
+| [`timestamp [without time zone]`][psql-time-ref]|[**`LocalDateTime`**][java-ldt-ref], [`LocalTime`][java-lt-ref], [`LocalDate`][java-ld-ref], [`java.util.Date`][java-legacy-date-ref], [`java.sql.Timestamp`][java-sql-timestamp-ref]|
+| [`timestamp [with time zone]`][psql-time-ref]   | [**`OffsetDatetime`**][java-odt-ref], [`ZonedDateTime`][java-zdt-ref], [`Instant`][java-instant-ref], [`java.sql.Timestamp`][java-sql-timestamp-ref]|
 | [`tsquery`][psql-tsquery-ref]                   | Not yet supported.|
 | [`tsvector`][psql-tsvector-ref]                 | Not yet supported.|
 | [`txid_snapshot`][psql-txid_snapshot-ref]       | Not yet supported.|
@@ -410,6 +410,8 @@ Support for the following single-dimensional arrays (read and write):
 [java-ld-ref]: https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html
 [java-lt-ref]: https://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html
 [java-legacy-date-ref]: https://docs.oracle.com/javase/8/docs/api/java/util/Date.html
+[java-sql-date-ref]: https://docs.oracle.com/javase/8/docs/api/java/sql/Date.html
+[java-sql-timestamp-ref]: https://docs.oracle.com/javase/8/docs/api/java/sql/Timestamp.html
 [java-odt-ref]: https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html
 [java-primitive-ref]: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
 [java-short-ref]: https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html
