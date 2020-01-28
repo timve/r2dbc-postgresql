@@ -82,6 +82,8 @@ public final class DefaultCodecs implements Codecs, CodecRegistry {
             // Fallback for Object.class
             new ByteCodec(byteBufAllocator),
             new DateCodec(byteBufAllocator),
+            new SqlDateCodec(byteBufAllocator),
+            new SqlTimestampCodec(byteBufAllocator),
 
             new BlobCodec(byteBufAllocator),
             new ClobCodec(byteBufAllocator),
